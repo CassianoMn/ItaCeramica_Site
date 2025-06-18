@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ItaCeramica</title>
+    <meta name="description" content="Entre em contato com a ItaCeramica. Envie seus comentários, dúvidas ou sugestões através do nosso formulário.">
+    <meta name="keywords" content="contato, ItaCeramica, formulário, comentários, sugestões">
+    <meta name="author" content="ItaCeramica">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Language" content="pt-BR">
+    <meta property="og:title" content="Contato - ItaCeramica">
+    <meta property="og:description" content="Fale conosco! Envie sua mensagem para a ItaCeramica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.itaceramica.com.br/contato.html">
+    <meta property="og:image" content="https://placehold.co/1200x630?text=ItaCeramica+Contato">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <header>
+        <h1>ItaCeramica</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="index.html#produtos">Produtos</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="formulario-contato">
+            <h2>Fale Conosco</h2>
+            <p>Adoraríamos ouvir sua opinião! Utilize o formulário abaixo para enviar seus comentários, dúvidas ou sugestões sobre nosso site e produtos.</p>
+            <form action="mailto:contato@itaceramica.com.br" method="POST" enctype="text/plain">
+                <div>
+                    <label for="nome">Nome Completo:</label><br>
+                    <input type="text" id="nome" name="Nome" required size="50"><br><br>
+                </div>
+                <div>
+                    <label for="email">Seu E-mail:</label><br>
+                    <input type="email" id="email" name="Email" required size="50"><br><br>
+                </div>
+                <div>
+                    <label for="assunto">Assunto:</label><br>
+                    <input type="text" id="assunto" name="Assunto" required size="50"><br><br>
+                </div>
+                <div>
+                    <label for="mensagem">Sua Mensagem:</label><br>
+                    <textarea id="mensagem" name="Mensagem" rows="10" cols="50" required></textarea><br><br>
+                </div>
+                <div>
+                    <button type="submit">Enviar Comentário</button>
+                    <button type="reset">Limpar Formulário</button>
+                </div>
+            </form>
+            <p><small>Ao clicar em "Enviar Comentário", seu programa de e-mail padrão será aberto para enviar a mensagem.</small></p>
+        </section>
+
+        <section id="outras-formas-contato">
+            <h3>Outras Formas de Contato</h3>
+            <p><strong>Telefone:</strong> (79) 4002-8922</p>
+            <p><strong>Endereço:</strong> Rua das Cerâmicas, 123, Centro, Itabaiana - SE, CEP 49500-000</p>
+            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 8h às 18h. Sábado, das 8h às 12h.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ItaCeramica. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
