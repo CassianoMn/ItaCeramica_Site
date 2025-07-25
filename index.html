@@ -12,7 +12,8 @@
     <meta http-equiv="Content-Language" content="pt-BR">
     <meta name="rating" content="general">
     <meta name="distribution" content="global">
-    <link rel="canonical" href="http://www.itaceramica.com.br/index.html"> <meta property="og:title" content="ItaCeramica - Produtos Cerâmicos">
+    <link rel="canonical" href="http://www.itaceramica.com.br/index.html"> 
+    <meta property="og:title" content="ItaCeramica - Produtos Cerâmicos">
     <meta property="og:description" content="Qualidade e variedade em produtos cerâmicos para sua obra.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.itaceramica.com.br/index.html">
@@ -21,7 +22,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ItaCeramica - Produtos Cerâmicos">
     <meta name="twitter:description" content="Qualidade e variedade em produtos cerâmicos para sua obra.">
-    <meta name="twitter:image" content="img/banner.jpg">
+    <meta property="twitter:image" content="img/banner.jpg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/ui-lightness/jquery-ui.css">
 </head>
 <body>
     <header>
@@ -29,124 +36,106 @@
          <nav>
              <ul>
                  <li><a href="index.html" class="active">Página Inicial</a></li>
-                 <li><a href="#produtos">Produtos</a></li>
+                 <li><a href="produtos.html">Produtos</a></li>
                  <li><a href="contato.html">Contato</a></li>
              </ul>
          </nav>
     </header>
 
     <main>
-        <section id="banner">
-            <h2>Bem-vindo à ItaCeramica!</h2>
-            <p>Sua fonte confiável de produtos cerâmicos de alta qualidade para todos os tipos de construção e reforma.</p>
-            <img src="img/banner.jpg" alt="Banner Promocional ItaCeramica">
+        <section id="welcome-section">
+            <div class="welcome-content">
+                <h2>Bem-vindo à ItaCeramica!</h2>
+                <p>Sua fonte confiável de produtos cerâmicos de alta qualidade para todos os tipos de construção e reforma.</p>
+                <img src="img/banner.jpg" alt="Banner Promocional ItaCeramica" class="welcome-image">
+            </div>
+        </section>
+        
+        <section id="news-highlights">
+            <div class="container">
+                <h2 data-aos="fade-up">Destaques</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Fique por dentro das novidades da ItaCeramica</p>
+                
+                <div class="news-grid">
+                    <article class="news-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="news-image">
+                            <img src="img/porcelanatoTecnCinza.webp" alt="Lançamento Porcelanato Técnico">
+                            <div class="news-badge">Destaque</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date">15 de Janeiro, 2025</span>
+                                <span class="news-category">Lançamentos</span>
+                            </div>
+                            <h3>Novo Porcelanato Técnico Cinza Industrial</h3>
+                            <p>Apresentamos nossa mais nova linha de porcelanato técnico, desenvolvida especialmente para áreas de alto tráfego. Com tecnologia avançada e design moderno.</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="news-image">
+                            <img src="img/ladrilhoHidraulicoAzul.webp" alt="Tendências 2025">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date">10 de Janeiro, 2025</span>
+                                <span class="news-category">Tendências</span>
+                            </div>
+                            <h3>Ladrilhos Hidráulicos: Tendência 2025</h3>
+                            <p>Os ladrilhos hidráulicos voltaram com força total. Descubra como incorporar essa tendência em seus projetos.</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="news-image">
+                            <img src="img/pisoCeraAmadeirado.webp" alt="Dicas de Instalação">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date">05 de Janeiro, 2025</span>
+                                <span class="news-category">Dicas</span>
+                            </div>
+                            <h3>Dicas para Instalação de Pisos Amadeirados</h3>
+                            <p>Guia completo com dicas profissionais para uma instalação perfeita de pisos cerâmicos amadeirados.</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="news-actions" data-aos="fade-up" data-aos-delay="800">
+                    <button class="btn-load-more" id="loadMoreNews">Carregar Mais Destaques</button>
+                </div>
+            </div>
         </section>
 
-        <section id="produtos">
-            <h2>Nossos Produtos</h2>
-            
-            <article class="produto-item">
-                <a href="produto1.htm">
-                    <img src="img/pisoCeraAmadeirado.webp" alt="Imagem do Piso Cerâmico Amadeirado Carvalho">
-                    <h3>Piso Cerâmico Amadeirado Carvalho</h3>
-                    <p>Elegante piso cerâmico com textura de madeira carvalho, ideal para ambientes internos.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto2.html">
-                    <img src="img/revestCeramBranco.webp" alt="Imagem do Revestimento Cerâmico Branco Neve">
-                    <h3>Revestimento Cerâmico Branco Neve</h3>
-                    <p>Revestimento brilhante para paredes internas, perfeito para cozinhas e banheiros.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto3.html">
-                    <img src="img/ladrilhoHidraulicoAzul.webp">
-                    <h3>Ladrilho Hidráulico Colonial Azul</h3>
-                    <p>Charme e tradição com este ladrilho decorativo para pisos e paredes.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto4.html">
-                    <img src="img/pastilhaCeramicaVerde.webp" alt="Imagem da Pastilha Cerâmica Verde Esmeralda">
-                    <h3>Pastilha Cerâmica Verde Esmeralda</h3>
-                    <p>Ideal para detalhes decorativos, piscinas e fachadas. Cor vibrante.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto5.html">
-                    <img src="img/porcelanatoTecnCinza.webp" alt="Imagem do Porcelanato Técnico Cinza Industrial">
-                    <h3>Porcelanato Técnico Cinza Industrial</h3>
-                    <p>Alta resistência para áreas de grande tráfego, com visual moderno.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto6.html">
-                    <img src="img/cobogoCeramico.webp" alt="Imagem do Cobogó Cerâmico Elemento Sol">
-                    <h3>Cobogó Cerâmico Elemento Sol</h3>
-                    <p>Elemento vazado para divisórias e fachadas, permitindo ventilação e iluminação.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto7.html">
-                    <img src="img/tijoloAparenteRustico.webp" alt="Imagem do Tijolo Aparente Rústico Mesclado">
-                    <h3>Tijolo Aparente Rústico Mesclado</h3>
-                    <p>Para alvenaria aparente com um toque rústico e charmoso.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto8.html">
-                    <img src="img/pisoCeramicoAntiderr.webp" alt="Imagem do Piso Cerâmico Externo Antiderrapante Pedra">
-                    <h3>Piso Cerâmico Externo Antiderrapante Pedra</h3>
-                    <p>Segurança e durabilidade para áreas externas, com textura de pedra.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto9.html">
-                    <img src="img/pisoCeramicoDecorado.webp" alt="Imagem do Revestimento Cerâmico Decorado Azulejo Português">
-                    <h3>Revestimento Cerâmico Decorado Azulejo Português</h3>
-                    <p>Clássico azulejo português para painéis decorativos cheios de estilo.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto10.html">
-                    <img src="img/soleiraBege.webp" alt="Imagem da Soleira de Cerâmica Bege Bahia">
-                    <h3>Soleira de Cerâmica Bege Bahia</h3>
-                    <p>Acabamento elegante para vãos de portas e janelas.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto11.html">
-                    <img src="img/rodapeCeramico.webp" alt="Imagem do Rodapé Cerâmico Liso Branco">
-                    <h3>Rodapé Cerâmico Liso Branco</h3>
-                    <p>Acabamento perfeito entre o piso e a parede, disponível em branco liso.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
-            <article class="produto-item">
-                <a href="produto12.html">
-                    <img src="img/blocoCeramicoEstrutural.webp" alt="Imagem do Bloco Cerâmico Estrutural 9x19x39">
-                    <h3>Bloco Cerâmico Estrutural 9x19x39</h3>
-                    <p>Bloco de alta qualidade para alvenaria estrutural.<br><b>Clique para mais detalhes.</b></p>
-                </a>
-            </article>
-
+        <section id="produtos-home">
+            <div class="container">
+                <h2>Conheça Nossa Linha Completa de Produtos</h2>
+                <p>Oferecemos uma vasta gama de cerâmicas para transformar seu ambiente. Veja nosso catálogo completo!</p>
+                <div class="text-center">
+                    <a href="produtos.html" class="btn-load-more">Ver Todos os Produtos</a>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2025 ItaCeramica. Todos os direitos reservados.</p>
         <p>Rua das Cerâmicas, 123, Centro, Itabaiana - SE</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/localization/messages_pt_BR.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>

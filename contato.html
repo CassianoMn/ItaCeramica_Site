@@ -4,69 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - ItaCeramica</title>
-    <meta name="description" content="Entre em contato com a ItaCeramica. Envie seus comentários, dúvidas ou sugestões através do nosso formulário.">
-    <meta name="keywords" content="contato, ItaCeramica, formulário, comentários, sugestões">
+    <meta name="description" content="Entre em contato com a ItaCeramica. Preencha nosso formulário ou encontre nosso endereço. Estamos prontos para atender você.">
+    <link rel="stylesheet" href="css/style.css"> 
+    <meta name="keywords" content="contato, itaceramica, orçamento, falar com, endereço, telefone">
     <meta name="author" content="ItaCeramica">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Language" content="pt-BR">
+    <link rel="canonical" href="http://www.itaceramica.com.br/contato.html"> 
     <meta property="og:title" content="Contato - ItaCeramica">
-    <meta property="og:description" content="Fale conosco! Envie sua mensagem para a ItaCeramica.">
+    <meta property="og:description" content="Fale conosco para orçamentos, dúvidas e informações sobre nossos produtos cerâmicos.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.itaceramica.com.br/contato.html">
-    <meta property="og:image" content="https://placehold.co/1200x630?text=ItaCeramica+Contato">
-    <link rel="stylesheet" href="css/style.css"> 
+    <meta property="og:image" content="img/banner.jpg">
+    <meta property="og:site_name" content="ItaCeramica">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contato - ItaCeramica">
+    <meta name="twitter:description" content="Fale conosco para orçamentos, dúvidas e informações sobre nossos produtos cerâmicos.">
+    <meta property="twitter:image" content="img/banner.jpg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/ui-lightness/jquery-ui.css">
 </head>
 <body>
     <header>
         <h1>ItaCeramica</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="index.html#produtos">Produtos</a></li>
-                <li><a href="contato.html" class="active">Contato</a></li>
-            </ul>
-        </nav>
+         <nav>
+             <ul>
+                 <li><a href="index.html">Página Inicial</a></li>
+                 <li><a href="index.html#produtos">Produtos</a></li>
+                 <li><a href="contato.html" class="active">Contato</a></li>
+             </ul>
+         </nav>
     </header>
 
     <main>
-        <section id="formulario-contato">
-            <h2>Fale Conosco</h2>
-            <p>Adoraríamos ouvir sua opinião! Utilize o formulário abaixo para enviar seus comentários, dúvidas ou sugestões sobre nosso site e produtos.</p>
-            <form action="mailto:contato@itaceramica.com.br" method="POST" enctype="text/plain">
-                <div>
-                    <label for="nome">Nome Completo:</label><br>
-                    <input type="text" id="nome" name="Nome" required size="50"><br><br>
+        <section id="contato-form">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato com você!</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
-                <div>
-                    <label for="email">Seu E-mail:</label><br>
-                    <input type="email" id="email" name="Email" required size="50"><br><br>
+                
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div>
-                    <label for="assunto">Assunto:</label><br>
-                    <input type="text" id="assunto" name="Assunto" required size="50"><br><br>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone *</label>
+                    <input type="tel" id="telefone" name="telefone" required>
                 </div>
-                <div>
-                    <label for="mensagem">Sua Mensagem:</label><br>
-                    <textarea id="mensagem" name="Mensagem" rows="10" cols="50" required></textarea><br><br>
+                
+                <div class="form-group">
+                    <label for="produto">Produto de Interesse</label>
+                    <select id="produto" name="produto">
+                        <option value="">Selecione um produto</option>
+                        <option value="piso-amadeirado">Piso Cerâmico Amadeirado</option>
+                        <option value="revestimento-branco">Revestimento Cerâmico Branco</option>
+                        <option value="ladrilho-azul">Ladrilho Hidráulico Azul</option>
+                        <option value="pastilha-verde">Pastilha Cerâmica Verde</option>
+                        <option value="porcelanato-cinza">Porcelanato Técnico Cinza</option>
+                        <option value="cobogo">Cobogó Cerâmico</option>
+                        <option value="tijolo-rustico">Tijolo Aparente Rústico</option>
+                        <option value="piso-antiderrapante">Piso Antiderrapante</option>
+                        <option value="azulejo-portugues">Azulejo Português</option>
+                        <option value="soleira-bege">Soleira Bege</option>
+                        <option value="rodape-branco">Rodapé Branco</option>
+                        <option value="bloco-estrutural">Bloco Estrutural</option>
+                    </select>
                 </div>
-                <div>
-                    <button type="submit">Enviar Comentário</button>
-                    <button type="reset">Limpar Formulário</button>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                 </div>
+                
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
             </form>
-            <p><small>Ao clicar em "Enviar Comentário", seu programa de e-mail padrão será aberto para enviar a mensagem.</small></p>
-        </section>
-
-        <section id="outras-formas-contato">
-            <h3>Outras Formas de Contato</h3>
-            <p><strong>Telefone:</strong> (79) 4002-8922</p>
-            <p><strong>Endereço:</strong> Rua das Cerâmicas, 123, Centro, Itabaiana - SE, CEP 49500-000</p>
-            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 8h às 18h. Sábado, das 8h às 12h.</p>
+            
+            <div id="form-success" class="success-message" style="display: none;">
+                <h3>Mensagem enviada com sucesso!</h3>
+                <p>Obrigado pelo seu contato. Retornaremos em breve!</p>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 ItaCeramica. Todos os direitos reservados.</p>
+        <p>Rua das Cerâmicas, 123, Centro, Itabaiana - SE</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/localization/messages_pt_BR.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
